@@ -20,4 +20,9 @@ def get_requirements() -> List[str]:
 
 
 if __name__ == "__main__":
-    setup(name=NAME, version=VERSION, install_requires=get_requirements())
+    setup(
+        name=NAME,
+        version=VERSION,
+        install_requires=get_requirements(),
+        entry_points={"console_scripts": ["pyinit=run:main"]},
+    )
